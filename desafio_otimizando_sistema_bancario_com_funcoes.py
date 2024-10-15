@@ -45,7 +45,7 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
         print("Retire seu dinheiro!\n")
     else:
         print("Valor Inválido.")
-    return saldo, extrato
+    return saldo, extrato, numero_saques
 
 def exibir_extrato(saldo, /, *, extrato):
     print("\n============Extrato============")
@@ -107,7 +107,7 @@ def main():
         if opcao == "s":
             valor = float(input("Informe o valor do saque: "))
 
-            saldo, extrato = sacar(
+            saldo, extrato, numero_saques = sacar(
                 saldo=saldo,
                 valor=valor,
                 extrato=extrato,
